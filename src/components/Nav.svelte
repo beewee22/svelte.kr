@@ -13,8 +13,6 @@
   ul {
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
   }
 
   /* clearfix */
@@ -26,7 +24,14 @@
 
   li {
     display: inline-flex;
+    float: right;
+  }
+  li.left {
     float: left;
+  }
+  li.logo-wrap {
+    height: 100%;
+    padding: 1em 0.5em;
   }
 
   .selected {
@@ -53,7 +58,7 @@
 
 <nav>
   <ul>
-    <li>
+    <li class="logo-wrap left">
       <Logo />
     </li>
     <li>
