@@ -10,12 +10,30 @@
     padding: 0 1em;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--nav-h);
+    padding: 0 var(--side-nav) 0 var(--side-nav);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0 -0.4rem 0.9rem 0.2rem rgba(0,0,0,.5);
+
   }
 
   ul {
     margin: 0;
     padding: 0;
     float: right;
+    display: inline-flex;
   }
 
   /* clearfix */
@@ -27,9 +45,6 @@
 
   li {
     display: inline-flex;
-  }
-  li.logo-wrap {
-    height: 100%;
   }
 
   .selected {
@@ -49,22 +64,37 @@
 
   a {
     text-decoration: none;
-    padding: 1em 0.5em;
     display: block;
+    border-bottom: none;
+    font-size: var(--h5);
+    padding: 0 1rem;
+    border: none;
+    color: inherit;
+    font-family: var(--font);
+    display: inline-flex;
   }
 
   .icon {
     height: 20px;
   }
+  svg {
+    transform-origin: center center;
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+  
 </style>
 
 <nav>
-  <a href="/">
+  <a href="/" style="padding: 0">
     <Logo />
   </a>
   <ul>
     <li>
-      <a class={segment === 'Tutorial' ? 'selected' : ''} href="Tutorial">
+      <a class={segment === 'Tutorial' ? 'selected' : ''} href="https://svelte.dev/tutorial/">
         Tutorial
       </a>
     </li>
@@ -72,21 +102,21 @@
       <a class={segment === 'API' ? 'selected' : ''} href="API">API</a>
     </li>
     <li>
-      <a class={segment === 'Examples' ? 'selected' : ''} href="Examples">
+      <a class={segment === 'Examples' ? 'selected' : ''} href="https://svelte.dev/examples">
         Examples
       </a>
     </li>
     <li>
-      <a class={segment === 'REPL' ? 'selected' : ''} href="REPL">REPL</a>
+      <a class={segment === 'REPL' ? 'selected' : ''} href="https://svelte.dev/repl/">REPL</a>
     </li>
     <li>
-      <a class={segment === 'Blog' ? 'selected' : ''} href="Blog">Blog</a>
+      <a class={segment === 'Blog' ? 'selected' : ''} href="https://svelte.dev/blog">Blog</a>
     </li>
     <li>
-      <a class={segment === 'FAQ' ? 'selected' : ''} href="FAQ">FAQ</a>
+      <a class={segment === 'FAQ' ? 'selected' : ''} href="https://github.com/sveltejs/svelte/wiki/FAQ">FAQ</a>
     </li>
     <li>
-      <a class={segment === 'Sapper' ? 'selected' : ''} href="Sapper">Sapper</a>
+      <a class={segment === 'Sapper' ? 'selected' : ''} href="https://sapper.svelte.dev/">Sapper</a>
     </li>
     <li>
       <a href="https://discordapp.com/invite/yy75DKs">
@@ -97,7 +127,7 @@
       </a>
     </li>
     <li>
-      <a class={segment === 'github' ? 'selected' : ''} href="github">
+      <a class={segment === 'github' ? 'selected' : ''} href="https://github.com/sveltejs/svelte">
         <svg id="github" class="icon" viewBox="0 0 24 24">
           <path
             d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0
