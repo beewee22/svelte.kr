@@ -9,23 +9,27 @@
 </script>
 
 <style>
+
   .logo-container {
-    width: 100px;
-    margin: 0px 10px;
+    --nav-width: 170px;
+    --logo-width: 30px;
+    --typo-width: 100px;
+
+    width: var(--nav-width);
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
   }
   .logo-symbol {
-    flex: 0 0 20px;
+    flex: 0 0 var(--logo-width);
   }
   .logo-type {
-    flex: 0 0 60px;
-    max-width: 60px;
+    flex: 0 0 var(--typo-width);
+    max-width: var(--typo-width);
   }
   .logo-korea {
-    font-size: 12px;
-    flex: 0 0 10px;
+    font-size: var(--h5);
+    flex: 0 0 30px;
     align-self: flex-end;
     text-align: left;
     position: relative;
