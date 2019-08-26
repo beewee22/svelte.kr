@@ -1,88 +1,86 @@
-# sapper-template
+<p>
+  <a href="https://svelte.dev">
+	<img alt="Cybernetically enhanced web apps: Svelte" src="https://svelte-assets.surge.sh/banner.png">
+  </a>
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, with branches for Rollup and webpack. To clone it and get started:
+  <a href="https://www.npmjs.com/package/svelte">
+    <img src="https://img.shields.io/npm/v/svelte.svg" alt="npm version">
+  </a>
+
+  <a href="https://packagephobia.now.sh/result?p=svelte">
+    <img src="https://packagephobia.now.sh/badge?p=svelte" alt="install size">
+  </a>
+
+  <a href="https://travis-ci.org/sveltejs/svelte">
+    <img src="https://api.travis-ci.org/sveltejs/svelte.svg?branch=master"
+         alt="build status">
+  </a>
+
+  <a href="https://github.com/sveltejs/svelte/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/svelte.svg" alt="license">
+  </a>
+</p>
+
+## Svelte란 무엇입니까?
+
+Svelte(스벨트)는 웹 어플리케이션을 만드는 새로운 방법입니다. 이것은 사용자의 선언적인 컴포넌트를 정교하게 DOM을 업데이트하는 효율적인 자바스크립트 코드로 바꿔주는 컴파일러입니다.
+
+[Svelte 웹사이트](https://svelte.dev)에서 더 많은 것을 배워보거나, [디스코드 채팅방](https://svelte.dev/chat)에 들러보세요.
+
+## 개발에 참여하기
+
+Pull request는 언제나 환영합니다. [이슈를 등록](https://github.com/sveltejs/svelte/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)하여 저희를 도와주세요!
+
+로컬 환경에서 스벨트를 설치 및 작업하는 방법:
 
 ```bash
-# for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
-# for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
-cd my-app
-npm install # or yarn!
+git clone https://github.com/sveltejs/svelte.git
+cd svelte
+npm install
+```
+
+> 많은 테스트들이 줄바꿈을 `<LF>`로 지키도록 짜여져 있습니다. 윈도우즈 환경이라면 `git clone`을 실행할 때에 다음의 명령어로 해결 가능합니다.
+>
+> ```bash
+> git -c core.autocrlf=false clone https://github.com/sveltejs/svelte.git
+> ```
+
+컴파일러 및 패키지의 모든 모듈을 빌드하려면:
+
+```bash
+npm run build
+```
+
+변경사항을 실시간으로 반영하여 rebuild ([npm link](https://docs.npmjs.com/cli/link.html)를 사용하여 프로젝트의 변경사항을 로컬에서 테스트하는 경우에 유용합니다):
+
+```bash
 npm run dev
 ```
 
-Open up [localhost:3000](http://localhost:3000) and start clicking around.
+컴파일러는 [TypeScript](https://www.typescriptlang.org/)로 작성되었습니다. 하지만 꺼려할 필요 없습니다 — 기본적으로 이 코드들은 일반적인 자바스크립트에 타입 주석이 포함된 것 뿐입니다. 놀라울 정도로 금방 익힐 수 있습니다. 만약에 당신이 [Visual Studio Code](https://code.visualstudio.com/) 이외의 에디터를 사용하고 있다면, syntax highlighting과 code hints를 위한 플러그인을 설치해야 할 필요가 있을겁니다.
 
-Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
-
-
-## Structure
-
-Sapper expects to find two directories in the root of your project —  `src` and `static`.
-
-
-### src
-
-The [src](src) directory contains the entry points for your app — `client.js`, `server.js` and (optionally) a `service-worker.js` — along with a `template.html` file and a `routes` directory.
-
-
-#### src/routes
-
-This is the heart of your Sapper app. There are two kinds of routes — *pages*, and *server routes*.
-
-**Pages** are Svelte components written in `.svelte` files. When a user first visits the application, they will be served a server-rendered version of the route in question, plus some JavaScript that 'hydrates' the page and initialises a client-side router. From that point forward, navigating to other pages is handled entirely on the client for a fast, app-like feel. (Sapper will preload and cache the code for these subsequent pages, so that navigation is instantaneous.)
-
-**Server routes** are modules written in `.js` files, that export functions corresponding to HTTP methods. Each function receives Express `request` and `response` objects as arguments, plus a `next` function. This is useful for creating a JSON API, for example.
-
-There are three simple rules for naming the files that define your routes:
-
-* A file called `src/routes/about.svelte` corresponds to the `/about` route. A file called `src/routes/blog/[slug].svelte` corresponds to the `/blog/:slug` route, in which case `params.slug` is available to the route
-* The file `src/routes/index.svelte` (or `src/routes/index.js`) corresponds to the root of your app. `src/routes/about/index.svelte` is treated the same as `src/routes/about.svelte`.
-* Files and directories with a leading underscore do *not* create routes. This allows you to colocate helper modules and components with the routes that depend on them — for example you could have a file called `src/routes/_helpers/datetime.js` and it would *not* create a `/_helpers/datetime` route
-
-
-### static
-
-The [static](static) directory contains any static assets that should be available. These are served using [sirv](https://github.com/lukeed/sirv).
-
-In your [service-worker.js](src/service-worker.js) file, you can import these as `files` from the generated manifest...
-
-```js
-import { files } from '@sapper/service-worker';
-```
-
-...so that you can cache them (though you can choose not to, for example if you don't want to cache very large files).
-
-
-## Bundler config
-
-Sapper uses Rollup or webpack to provide code-splitting and dynamic imports, as well as compiling your Svelte components. With webpack, it also provides hot module reloading. As long as you don't do anything daft, you can edit the configuration files to add whatever plugins you'd like.
-
-
-## Production mode and deployment
-
-To start a production version of your app, run `npm run build && npm start`. This will disable live reloading, and activate the appropriate bundler plugins.
-
-You can deploy your application to any environment that supports Node 8 or above. As an example, to deploy to [Now](https://zeit.co/now), run these commands:
+### 테스트 실행
 
 ```bash
-npm install -g now
-now
+npm run test
 ```
 
-
-## Using external components
-
-When using Svelte components installed from npm, such as [@sveltejs/svelte-virtual-list](https://github.com/sveltejs/svelte-virtual-list), Svelte needs the original component source (rather than any precompiled JavaScript that ships with the component). This allows the component to be rendered server-side, and also keeps your client-side app smaller.
-
-Because of that, it's essential that the bundler doesn't treat the package as an *external dependency*. You can either modify the `external` option under `server` in [rollup.config.js](rollup.config.js) or the `externals` option in [webpack.config.js](webpack.config.js), or simply install the package to `devDependencies` rather than `dependencies`, which will cause it to get bundled (and therefore compiled) with your app:
+테스트 필터링을 위해서는, `-g` (혹은 `--grep`)를 사용하세요. 예를들면, transition과 관련된 테스트만을 실행시키려면:
 
 ```bash
-npm install -D @sveltejs/svelte-virtual-list
+npm run test -- -g transition
 ```
 
+## svelte.dev
 
-## Bugs and feedback
+https://svelte.dev 의 소스코드, 관련된 모든 문서가 [site](site) 디렉토리에 있습니다. 사이트는 [Sapper](https://sapper.svelte.dev)로 만들어져 있습니다. 로컬 환경에서 개발하기 위해서는:
 
-Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
+```bash
+cd site
+npm install && npm run update
+npm run dev
+```
+
+## 라이센스
+
+[MIT](LICENSE)
