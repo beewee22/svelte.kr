@@ -29,7 +29,7 @@ Svelte(스벨트)는 웹 애플리케이션을 만드는 새로운 방법입니�
 
 ## 개발에 참여하기
 
-Pull request는 권장되며 항상 환영합니다. [이슈를 선택](https://github.com/sveltejs/svelte/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)하고, 저희를 도와주세요!
+Pull request는 항상 환영합니다. [이슈를 선택](https://github.com/sveltejs/svelte/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)하고, 저희를 도와주세요!
 [svelte.kr](https://github.com/beewee22/svelte.kr/issues)에도 참여 부탁드립니다.
 
 로컬에서 Svelte를 설치하고 작업하려면:
