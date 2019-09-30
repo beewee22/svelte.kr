@@ -25,7 +25,7 @@
 
 Svelte(스벨트)는 웹 애플리케이션을 만드는 새로운 방법입니다. Svelte는 사용자의 선언형 컴포넌트를  효율적인 JavaScript 코드로 변환해, 정교하게 DOM을 업데이트하는 컴파일러입니다.
 
-자세한 내용은 [Svelte 웹사이트](https://svelte.dev)확인하거나, [Discord 채널](https://svelte.dev/chat)에 들러보세요.
+자세한 내용은 [Svelte 웹사이트](https://svelte.dev)에서 확인하거나, [Discord 채널](https://svelte.dev/chat)에 들러보세요.
 
 ## 개발에 참여하기
 
