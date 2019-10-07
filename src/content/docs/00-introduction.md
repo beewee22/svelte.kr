@@ -1,9 +1,10 @@
 ---
-title: Before we begin
+제목: 시작하기 전에
 ---
 
-> Temporary note: This document is a work-in-progress. Please forgive any missing or misleading parts, and don't be shy about asking for help in the [Discord chatroom](chat). The [tutorial](tutorial) is more complete; start there.
 
-This page contains detailed API reference documentation. It's intended to be a resource for people who already have some familiarity with Svelte.
+> 임시 노트: 이 문서는 현재 진행형입니다. 누락되거나 잘못된 정보가 있어도 양해부탁드리고, 부끄러워하지 마시고 언제든지 [채팅](chat)으로 도움을 요청하세요. 완성도가 더 높은 [튜토리얼](tutorial)부터 시작하세요. 
 
-If that's not you (yet), you may prefer to visit the [interactive tutorial](tutorial) or the [examples](examples) before consulting this reference.
+이 페이지는 상세 API 문서에 대한 내용을 담고 있습니다. 이 문서의 의도는 스벨트에 어느 정도 친숙한 사람들을 도와주기 위함입니다.
+
+만약 당신이 (아직) 그런 사람이 아니라면 이 문서 이전에 [튜토리얼](tutorial)이나 [예제](examples)를 보는 것을 선호할 수 있습니다. 
