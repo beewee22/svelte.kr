@@ -6,6 +6,7 @@
   <a href="https://www.npmjs.com/package/svelte">
     <img src="https://img.shields.io/npm/v/svelte.svg" alt="npm version">
   </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fbeewee22%2Fsvelte.kr?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbeewee22%2Fsvelte.kr.svg?type=shield"/></a>
 
   <a href="https://packagephobia.now.sh/result?p=svelte">
     <img src="https://packagephobia.now.sh/badge?p=svelte" alt="install size">
@@ -20,6 +21,9 @@
     <img src="https://img.shields.io/npm/l/svelte.svg" alt="license">
   </a>
 </p>
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbeewee22%2Fsvelte.kr.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbeewee22%2Fsvelte.kr?ref=badge_large)
 
 ## Svelte란 무엇인가?
 
