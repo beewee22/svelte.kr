@@ -1,9 +1,0 @@
-{
-  "defaultSeverity": "warning",
-  "extends": ["tslint:latest", "plugin:prettier/recommended"],
-  "rules": {
-    "quotemark": false,
-    "no-submodule-imports": false,
-    "no-implicit-dependencies": false
-  }
-}
