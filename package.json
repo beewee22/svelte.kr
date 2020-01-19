@@ -1,0 +1,42 @@
+{
+  "name": "svelte.kr",
+  "version": "0.1.0",
+  "description": "Svelte Documantation pages for Korean",
+  "main": "index.js",
+  "scripts": {
+    "download-svelte": "node scripts/do download svelte",
+    "download-sapper": "node scripts/do download sapper",
+    "download-svelte-native": "node scripts/do download svelte-native",
+    "install-svelte": "node scripts/do install svelte",
+    "install-sapper": "node scripts/do install sapper",
+    "install-svelte-native": "node scripts/do install svelte-native",
+    "update-svelte": "node scripts/do update svelte",
+    "update-sapper": "node scripts/do update sapper",
+    "update-svelte-native": "node scripts/do update svelte-native",
+    "dev-svelte": "node scripts/do dev svelte",
+    "dev-sapper": "node scripts/do dev sapper",
+    "dev-svelte-native": "node scripts/do dev svelte-native",
+    "build-svelte": "node scripts/do build svelte",
+    "build-sapper": "node scripts/do build sapper",
+    "build-svelte-native": "node scripts/do build svelte-native",
+    "start-svelte": "node scripts/do start svelte",
+    "start-sapper": "node scripts/do start sapper",
+    "start-svelte-native": "node scripts/do start svelte-native"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beewee22/svelte.kr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beewee22/svelte.kr/issues"
+  },
+  "homepage": "https://svelte.kr",
+  "devDependencies": {
+    "node-watch": "^0.6.1",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}
