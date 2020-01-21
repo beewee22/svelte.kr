@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "file": "src/routes/index.svelte",
+      "strings": [
+        {
+          "o": "Write less code",
+          "t": "적은 코드량"
+        }
+      ]
+    }
+  ]
+}
